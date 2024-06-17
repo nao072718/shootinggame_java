@@ -14,7 +14,11 @@ public class GameFrame extends MyFrame{
 			 PlayerBullet b =GameWorld.playBullets.get(i);
 			 b.draw(this);
 			 b.move();
-			 i++;
+			 if(b.y<0) {
+				 GameWorld.playBullets.remove(i);
+			 }else {
+				  i++;
+		     }
 		 }
 		 sleep(0.03);
 	 }
