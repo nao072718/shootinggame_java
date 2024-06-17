@@ -9,6 +9,7 @@ public class GameFrame extends MyFrame{
 		 clear();
 		 GameWorld.player.draw(this);
 		 GameWorld.player.move();
+		 movePlayerBullets();
 		 int i=0;
 		 while(i< GameWorld.playBullets.size()) {
 			 PlayerBullet b =GameWorld.playBullets.get(i);
@@ -21,8 +22,23 @@ public class GameFrame extends MyFrame{
 		     }
 		 }
 		 sleep(0.03);
-	 }
+ }
 	}
-	
+	public void movePlayerBullets() {
+		 int i=0;
+		 while(i< GameWorld.playBullets.size()) {
+			 PlayerBullet b =GameWorld.playBullets.get(i);
+			 b.draw(this);
+			 b.move();
+			 if(b.y<0) {
+				 GameWorld.playBullets.remove(i);
+			 }else {
+				  i++;
+		     }
+		 }
+		
+		
+		
+	}
 	
 }
