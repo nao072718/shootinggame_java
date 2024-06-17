@@ -26,6 +26,9 @@ public void move() {
 		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
 			vx=5;
 		}
+		if(e.getKeyCode()==KeyEvent.VK_SPACE) {
+			GameWorld.playBullets.add(new PlayerBullet(x,y,0,-10));
+		}
 	}
 
 	@Override
