@@ -7,7 +7,13 @@ public class RandomEnemy extends Enemy{
 		super.move();
 		vx=Math.random()*4-2;
 	}
-	
+	public void draw(MyFrame f) {
+		    f.setColor(0, 128, 0);
+			f.fillRect(x, y, 32, 32);
+			f.setColor(200, 200, 200);
+			f.fillOval(x-16, y+8, 64, 16);
+			
+		}
 	
 	
 	
