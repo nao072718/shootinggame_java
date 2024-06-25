@@ -36,7 +36,6 @@ public class GameFrame extends MyFrame{
 				 break;
 			 }
 		 }
-		 
 		 sleep(0.03);
        }
 	 }
